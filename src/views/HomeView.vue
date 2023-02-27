@@ -2,7 +2,7 @@
     <div class="home">
         <img alt="Vue logo" src="../assets/logo.png">
 
-        <div class="counter">{{ counter }}</div>
+        <div class="counter">{{ $store.state.counter }}</div>
 
         <div class="buttons">
             <button @click="decreaseCounter">-</button>
@@ -14,20 +14,18 @@
 <script>
 
 export default {
-  name: 'HomeView',
-  methods:{
-      increaseCounter(){
-          this.counter++;
-      },
-      decreaseCounter(){
-          this.counter--;
-      }
-  },
-  data(){
-      return {
-          counter: 0
-      }
-  }
+    name: 'HomeView',
+    methods:{
+        increaseCounter(){
+            this.counter++;
+        },
+        decreaseCounter(){
+            this.counter--;
+        }
+    },
+    mounted(){
+        console.log(this.$store);
+    }
 }
 </script>
 
