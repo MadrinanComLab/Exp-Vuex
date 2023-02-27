@@ -14,18 +14,7 @@
 <script>
 
 export default {
-    name: 'HomeView',
-    methods:{
-        increaseCounter(){
-            this.counter++;
-        },
-        decreaseCounter(){
-            this.counter--;
-        }
-    },
-    mounted(){
-        console.log(this.$store);
-    }
+    name: 'HomeView'
 }
 </script>
 

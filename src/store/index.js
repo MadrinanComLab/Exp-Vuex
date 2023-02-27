@@ -11,6 +11,12 @@ export default createStore({
      * TERM 'committing' WAS USED.
      */
     mutations:{
+        increaseCounter(state){
+            state.counter++;
+        },
+        decreaseCounter(state){
+            state.counter--;
+        }
     },
     /**
      * ACTIONS - THIS ALSO CONTAIN FUNCTION BUT THESE FUNCTION CAN'T CHANGE THE VALUE OF DATA
