@@ -5,8 +5,9 @@
         <div class="counter">{{ $store.state.counter }}</div>
 
         <div class="buttons">
-            <button @click="decreaseCounter">-</button>
-            <button @click="increaseCounter">+</button>
+            <!-- This is how you call a mutation in the store/vuex -->
+            <button @click="$store.commit('decreaseCounter')">-</button>
+            <button @click="$store.commit('increaseCounter')">+</button>
         </div>
     </div>
 </template>

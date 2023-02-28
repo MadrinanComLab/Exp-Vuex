@@ -1,40 +1,56 @@
 import { createStore } from "vuex";
 
 export default createStore({
-    /** STATE - THIS WILL CONTAIN THE DATA OF THIS APP */
+    /** 'state' - This will contain the data of this app */
     state:{
         counter: 0
     },
     /** 
-     * MUTATIONS - THIS WILL CONTAIN THE FUNCTIONS OF THIS APP THAT CHANGE THE 'state' OR DATA. 
-     * BUT TAKE NOTE, THAT YOU CAN'T ADD ASYNC FUNCTIONS HERE. FOR TRIGGERING 'mutations', THE 
-     * TERM 'committing' WAS USED.
+     * 'mutations' - This will contain the functions of this app that change the 'state' or data. 
+     * But take note, that you can't add async functions here. For triggering 'mutations', the
+     * term 'committing' was used.
      */
     mutations:{
+        /**
+         * DOCU: This function will increase the value of 'counter' defined in state.
+         * Triggered: When user click the plus (+) button.
+         * Last Updated Date: February 28, 2023
+         * @function
+         * @memberOf stores
+         * @param {object} state - This was the state defined above. No need to include this when increaseCounter() was called.
+         * @author MadriñanComputerLab
+         */
         increaseCounter(state){
             state.counter++;
         },
+        /**
+         * DOCU: This function will decrease the value of 'counter' defined in state.
+         * Triggered: When user click the minus (-) button.
+         * Last Updated Date: February 28, 2023
+         * @function
+         * @memberOf stores
+         * @param {object} state - This was the state defined above. No need to include this when decreaseCounter() was called.
+         * @author MadriñanComputerLab
+         */
         decreaseCounter(state){
             state.counter--;
         }
     },
     /**
-     * ACTIONS - THIS ALSO CONTAIN FUNCTION BUT THESE FUNCTION CAN'T CHANGE THE VALUE OF DATA
-     * THAT IS IN THE STATE. UNLIKE IN MUTATIONS, YOU CAN WRITE ASYNC FUNCTIONS HERE. THE 
-     * TERM FOR TRIGGERING ACTIONS ARE CALLED 'dispatching'.
+     * 'actions' - This also contain the functions but these functions can't change the value of data
+     * that is in the state. Unlike mutations, you can write async functions here. the term for
+     * triggering actions are called 'dispatching'.
      */
     actions:{
     },
     /**
-     * GETTERS - THIS WAS USED TO HAVE RETRIEVE THE DATA STORED IN STATE. GETTERS ARE ONLY OPTIONAL,
-     * BUT YOU CAN USE GETTERS FOR PERFORM OPERATIONS UPON RETRIEVING THE DATA, EX.: GETTING THE 
-     * AVERAGE VALUE OR SORTING THE DATA.
+     * 'getters' - This was used to retrieve the data stored in state. 'getters' are only optional,
+     * but you can use getters for performing operations upon data retrieval. Ex.: Getting the 
+     * average value or sorting the data.
      */
     getters:{
     },
-    /** 
-     * MODULES - USING THIS, YOU CAN BREAK THE STORE INTO DIFFERENT MODULES THAT CONTAIN ITS OWN mutations, state, AND actions
-     */
+    /** 'modules' - Using this, you can break the store into different modules that contain mutations, state and actions. */
     modules:{
     }
 });
