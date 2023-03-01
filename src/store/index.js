@@ -82,6 +82,9 @@ export default createStore({
      * average value or sorting the data.
      */
     getters:{
+        counterSquared(state){
+            return state.counter * state.counter;
+        }
     },
     /** 'modules' - Using this, you can break the store into different modules that contain mutations, state and actions. */
     modules:{

@@ -4,6 +4,11 @@
 
         <div class="counter">{{ $store.state.counter }}</div>
 
+        <div class="counter-squared">
+            {{ $store.state.counter }}
+            <sup>2</sup> = {{ $store.getters.counterSquared }}
+        </div>
+
         <div class="buttons">
             <!-- This is how you call a mutation in the store/vuex -->
             <button @click="$store.dispatch('decreaseCounter')">-</button>
