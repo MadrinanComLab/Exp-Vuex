@@ -1,19 +1,16 @@
-# learn-vuex
+# Welcome to Vuex Experiment!
+This project was created on February 27, 2023<br/>
 
-## Project setup
-```
-npm install
-```
+Before you run this app, install the dependencies first, by running this command:
+NPM Command
+-------------------------------------------------|
+npm install|
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Command to run this app:
+NPM Command
+-------------------------------------------------|
+npm run serve|
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## How this project was created? Do the following:
+- Run this command:
+```vue create learn-vuex```
