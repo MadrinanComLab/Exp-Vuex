@@ -82,6 +82,15 @@ export default createStore({
      * average value or sorting the data.
      */
     getters:{
+        /**
+         * DOCU: This function will calculate the square of counter of this state.
+         * Triggered: When component loads and updates.
+         * Last Updated Date: March 2, 2023
+         * @function
+         * @memberOf stores
+         * @param {object} state - This was the state defined above. No need to include this when counterSquared() was called.
+         * @author MadriñanComputerLab
+         */
         counterSquared(state){
             return state.counter * state.counter;
         }
