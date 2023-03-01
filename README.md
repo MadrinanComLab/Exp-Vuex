@@ -2,6 +2,16 @@
 ![Vuex-Exp](https://user-images.githubusercontent.com/74145874/222163352-1f394e70-f737-41fd-baf1-a86ce4c8246d.jpg)
 This project was created on February 27, 2023<br/>
 
+## What does this project contain?:
+The following are the branches of this repo and a short description about it
+
+Branch | Description
+-------------|------------
+master       | This branch contains a demo for retrieving state value and how to use Vuex' mutation
+actions-demo | This branch contains a demo of how to use Vuex' actions
+getters-demo | This branch contains a demo of how to use Vuex' getters
+two-way-binding | This branch contains a demo of how to use implement a two-way binding (v-model) in Vuex
+
 ## How to run this project?:
 Before you run this app, install the dependencies first, by running this command:
 NPM Command
