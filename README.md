@@ -1,6 +1,8 @@
 # Welcome to Vuex Experiment!
+![Vuex-Exp](https://user-images.githubusercontent.com/74145874/222163352-1f394e70-f737-41fd-baf1-a86ce4c8246d.jpg)
 This project was created on February 27, 2023<br/>
 
+## How to run this project?:
 Before you run this app, install the dependencies first, by running this command:
 NPM Command
 -------------------------------------------------|
