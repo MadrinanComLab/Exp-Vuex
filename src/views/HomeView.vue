@@ -6,8 +6,8 @@
 
         <div class="buttons">
             <!-- This is how you call a mutation in the store/vuex -->
-            <button @click="$store.commit('decreaseCounter')">-</button>
-            <button @click="$store.commit('increaseCounter')">+</button>
+            <button @click="$store.dispatch('decreaseCounter')">-</button>
+            <button @click="$store.dispatch('increaseCounter')">+</button>
         </div>
     </div>
 </template>
