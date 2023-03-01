@@ -2,7 +2,9 @@
     <div class="home">
         <img alt="Vue logo" src="../assets/logo.png">
 
-        <div class="counter">{{ $store.state.counter }}</div>
+        <div class="counter" :style="{ color: $store.state.color_code }">
+            {{ $store.state.counter }}
+        </div>
 
         <div class="counter-squared">
             {{ $store.state.counter }}
@@ -14,13 +16,44 @@
             <button @click="$store.dispatch('decreaseCounter')">-</button>
             <button @click="$store.dispatch('increaseCounter')">+</button>
         </div>
+
+        <div>
+            <input type="text" placeholder="Enter color code" v-model="color_code">
+        </div>
     </div>
 </template>
 
 <script>
 
 export default {
-    name: 'HomeView'
+    name: 'HomeView',
+    computed: {
+        color_code: {
+            /**
+             * DOCU: This function will get get the color_code state in the store.
+             * Triggered: When component loads and update.
+             * Last Updated Date: March 2, 2023
+             * @function
+             * @memberOf stores
+             * @author MadriñanComputerLab
+             */
+            get(){
+                return this.$store.state.color_code;
+            },
+            /**
+             * DOCU: This function will get set the color_code state in the store by dispatching the 'setColorCode'.
+             * Triggered: When component loads and update.
+             * Last Updated Date: March 2, 2023
+             * @function
+             * @memberOf stores
+             * @param {string} new_value - This will be the new color code.
+             * @author MadriñanComputerLab
+             */
+            set(new_value){
+                this.$store.dispatch("setColorCode", new_value);
+            }
+        }
+    }
 }
 </script>
 

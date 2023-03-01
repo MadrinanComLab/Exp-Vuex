@@ -4,7 +4,8 @@ import axios from "axios";
 export default createStore({
     /** 'state' - This will contain the data of this app */
     state:{
-        counter: 0
+        counter: 0,
+        color_code: "blue"
     },
     /** 
      * 'mutations' - This will contain the functions of this app that change the 'state' or data. 
@@ -37,6 +38,19 @@ export default createStore({
          */
         decreaseCounter(state, random_number){
             state.counter -= random_number;
+        },
+        /**
+         * DOCU: This function will update the color_code in state.
+         * Triggered: This function will be committed by setColorCode() action.
+         * Last Updated Date: March 2, 2023
+         * @function
+         * @memberOf stores
+         * @param {state} commit - This will be given a value automatically by Vue.
+         * @param {string} new_value - This is the new color_code inputted by user.
+         * @author MadriñanComputerLab
+         */
+        setColorCode(state, new_value){
+            state.color_code = new_value;
         }
     },
     /**
@@ -74,6 +88,25 @@ export default createStore({
                 .then(response => {
                     commit("decreaseCounter", response.data);
                 });
+        },
+        /**
+         * DOCU: This function will call the setColorCode() in actions to set the new color code.
+         * Triggered: When user types in the color code input field.
+         * Last Updated Date: March 2, 2023
+         * @function
+         * @memberOf stores
+         * @param {function} commit - This will be given a value automatically by Vue.
+         * @param {string} new_value - This is the new color_code inputted by user.
+         * @author MadriñanComputerLab
+         */
+        setColorCode({ commit }, new_value){
+            /**
+             * Since it was a bit odd to see that this function does do much, and why the hell do we need to
+             * dispatch an action rather than committing the mutation directly? Well, it turns out that this is
+             * the proper way of doing things, and this is what Vue developers does:
+             * https://stackoverflow.com/questions/39299042/vuex-action-vs-mutations
+             */
+            commit("setColorCode", new_value);
         }
     },
     /**
@@ -82,6 +115,15 @@ export default createStore({
      * average value or sorting the data.
      */
     getters:{
+        /**
+         * DOCU: This function will calculate the square of counter of this state.
+         * Triggered: When component loads and updates.
+         * Last Updated Date: March 2, 2023
+         * @function
+         * @memberOf stores
+         * @param {object} state - This was the state defined above. No need to include this when counterSquared() was called.
+         * @author MadriñanComputerLab
+         */
         counterSquared(state){
             return state.counter * state.counter;
         }
