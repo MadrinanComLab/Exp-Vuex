@@ -1,6 +1,6 @@
 # Welcome to Vuex Experiment!
 ![Vuex-Exp](https://user-images.githubusercontent.com/74145874/222163352-1f394e70-f737-41fd-baf1-a86ce4c8246d.jpg)
-Source of this experiment: https://www.youtube.com/watch?v=nFh7-HfODYY&t=1230s
+Source of this experiment: https://www.youtube.com/watch?v=nFh7-HfODYY&t=1230s<br/>
 This project was created on February 27, 2023<br/>
 
 ## What does this project contain?:
