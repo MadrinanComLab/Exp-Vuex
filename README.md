@@ -15,14 +15,14 @@ two-way-binding | This branch contains a demo of how to use implement a two-way 
 
 ## How to run this project?:
 Before you run this app, install the dependencies first, by running this command:
-NPM Command
--------------------------------------------------|
-npm install|
+```
+npm install
+```
 
 Command to run this app:
-NPM Command
--------------------------------------------------|
-npm run serve|
+```
+npm run serve
+```
 
 ## How this project was created? Do the following:
 - Run this command:
@@ -54,9 +54,9 @@ export default createStore({
     mutations:{
     },
     actions:{
-    },,
+    },
     getters:{
-    }
+    },
     modules:{
     }
 });
