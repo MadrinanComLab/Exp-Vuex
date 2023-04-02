@@ -73,9 +73,9 @@ createApp(App)
     .use(store) // This was also added
     .mount('#app')
 ```
-
 ---
-### Connect with me via:
+### Did You Like This Project?
+Stay tuned for upcoming projects and experiments by following me on the following accounts:
 <p float="left">
   <a href="https://twitter.com/MadrinanComLab">
   <img src="https://user-images.githubusercontent.com/74145874/219954290-0afa8626-f2b5-44a9-8130-1ccce187ac06.png" width="50px" title="Twitter"/>
