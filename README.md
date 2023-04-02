@@ -74,7 +74,7 @@ createApp(App)
     .mount('#app')
 ```
 ---
-### Did You Like This Project?
+### Did You Like This Experiment?
 Stay tuned for upcoming projects and experiments by following me on the following accounts:
 <p float="left">
   <a href="https://twitter.com/MadrinanComLab">
